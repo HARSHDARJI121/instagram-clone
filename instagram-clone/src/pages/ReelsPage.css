@@ -1,0 +1,65 @@
+/* ReelsPage Container */
+.reels-page {
+    padding: 20px;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    margin: auto;
+   
+  }
+  
+  .reels-page h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Reels Grid Layout */
+  .reels-grid {
+    display: grid;
+    grid-template-columns: repeat(3,400px); /* 3 columns */
+    grid-template-rows: repeat(20,500px);
+    gap: 20px; /* Space between items */
+    margin: 0 auto;
+    max-width: 1200px; /* Maximum width for the grid */
+  }
+  
+  /* Individual Reel Item */
+  .reel-item {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Thumbnail Image */
+  .reel-thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+  }
+  
+  /* Video Styling */
+  video {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    height: 100%;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .reels-grid {
+      grid-template-columns: 1fr 1fr; /* 2 columns for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .reels-grid {
+      grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+  }
+  

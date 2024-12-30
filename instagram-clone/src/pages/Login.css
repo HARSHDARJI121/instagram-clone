@@ -1,0 +1,193 @@
+/* General styling for the page */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the login page */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to right, #f7b7a3, #f5b6cb);
+  padding: 0 20px;
+}
+
+/* Auth container */
+.auth-container {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px 50px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header style */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header text */
+h1 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+button {
+  background-color: #3897f0;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2a77d7;
+}
+
+/* Sign-up link for new users */
+.signup-link {
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.signup-link a {
+  color: #3897f0;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* AuthForm specific styles */
+.auth-form {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.auth-form input:focus {
+  border-color: #3897f0;
+  outline: none;
+}
+
+/* Responsive Adjustments */
+
+/* For Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .login-page {
+    padding: 0 10px;
+  }
+
+  .auth-container {
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+    margin-bottom: 15px;
+  }
+
+  .auth-form input {
+    padding: 10px 12px;
+    font-size: 14px; /* Adjust font size for inputs */
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 12px; /* Smaller button size for mobile */
+  }
+
+  .signup-link {
+    font-size: 12px; /* Adjust font size for sign-up link */
+  }
+}
+
+/* For Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .login-page {
+    padding: 0 20px;
+  }
+
+  .auth-container {
+    max-width: 90%;
+    padding: 35px 30px;
+  }
+
+  h1 {
+    font-size: 22px; /* Slightly smaller header for tablets */
+  }
+
+  .auth-form input {
+    padding: 12px 14px;
+    font-size: 15px; /* Adjust input size for tablets */
+  }
+
+  button {
+    padding: 10px 25px;
+    font-size: 13px; /* Adjust button size for tablets */
+  }
+
+  .signup-link {
+    font-size: 13px; /* Adjust font size for sign-up link */
+  }
+}
+
+/* For Desktop (min-width: 1025px) */
+@media (min-width: 1025px) {
+  .auth-container {
+    max-width: 400px; /* Default width for desktop */
+    padding: 40px 50px;
+  }
+
+  h1 {
+    font-size: 24px; /* Default header size */
+  }
+
+  .auth-form input {
+    padding: 12px 15px;
+    font-size: 16px; /* Default input size */
+  }
+
+  button {
+    padding: 12px 30px;
+    font-size: 14px; /* Default button size */
+  }
+
+  .signup-link {
+    font-size: 14px; /* Default font size for sign-up link */
+  }
+}

@@ -1,0 +1,71 @@
+/* New Messages Panel Container */
+.new-messages-panel {
+    background-color: #1a1a1a;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  /* Title */
+  .new-messages-panel h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #f1f1f1;
+  }
+  
+  /* List of Messages */
+  .new-messages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Individual Message Item */
+  .new-message-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Hover effect on message item */
+  .new-message-item:hover {
+    background-color: #333;
+  }
+  
+  /* Avatar Image */
+  .new-message-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  /* Message Details */
+  .new-message-details {
+    flex: 1;
+  }
+  
+  /* Message Name */
+  .new-message-name {
+    font-weight: bold;
+    display: block;
+  }
+  
+  /* Last Message */
+  .new-message-last {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  /* Message Time */
+  .new-message-time {
+    font-size: 0.8rem;
+    color: #aaa;
+  }
+  

@@ -1,0 +1,105 @@
+/* CreatePage Container */
+.create-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+  }
+  
+  /* Upload Box */
+  .upload-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .upload-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .upload-box input[type="file"] {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .upload-box input[type="file"]:hover {
+    border-color: #007bff;
+  }
+  
+  .upload-box .image-preview {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .upload-box .image-preview img {
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .upload-box .next-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-box .next-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .upload-box .confirmation-message {
+    padding: 20px;
+    background-color: #e9f7e9;
+    border-radius: 10px;
+    border: 2px solid #5cb85c;
+    color: #5cb85c;
+  }
+  
+  .upload-box .confirmation-message h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .upload-box {
+      padding: 20px;
+      width: 90%;
+    }
+  
+    .upload-box h2 {
+      font-size: 20px;
+    }
+  
+    .upload-box .next-button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  

@@ -1,0 +1,359 @@
+/* General Styles */
+.body {
+  background-color: black;
+  color: #f0f0f0; /* Light text color for readability */
+}
+
+/* Feed Section */
+.content-feed {
+  flex: 1;
+  margin-left: 150px; /* Sidebar space */
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+  background-color: black; /* Adjust for fixed navbar */
+}
+
+/* Post Section */
+.individual-post {
+  background-color: #1c1c1c; /* Slightly lighter black for contrast */
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+  color: #f0f0f0;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.post{
+  margin:0;
+}
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.user-profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px;
+}
+
+.post-username {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+.post-image {
+  width: 70%;
+  height: 450px;
+  object-fit: cover;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.action-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #f0f0f0;
+}
+
+.action-icon:hover {
+  color: #0095f6; /* Light blue for hover effects */
+}
+
+.post-caption {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.caption-author {
+  font-weight: bold;
+}
+
+/* Stories Section */
+.story-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-x: scroll; /* Allow horizontal scrolling for stories */
+  padding: 10px;
+  margin-left: -50px;
+  background-color: black; /* Match the feed background */
+}
+
+.individual-story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+  color: white;
+}
+
+.story-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #f77737; /* Instagram gradient color */
+  padding: 2px;
+  object-fit: cover;
+  margin-top: -10px;
+}
+
+.story-username {
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: center;
+  max-width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Hide scrollbar for better UI */
+.story-section::-webkit-scrollbar {
+  display: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .content-feed {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hide sidebar */
+    height: 100%;
+    width: 250px;
+    background-color: #111;
+    transition: left 0.3s ease;
+    color: #f0f0f0;
+    padding-top: 50px; /* To avoid navbar overlap */
+  }
+  .action-icon {
+    font-size: 15px;
+    cursor: pointer;
+    color: #f0f0f0;
+    padding: 0;
+}
+
+  /* Make the post images smaller on mobile */
+  .post-image {
+    width: 100%;  /* Ensure image fits well */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Reduce the size of story images on mobile */
+  .story-image {
+    width: 50px;  /* Smaller size for mobile */
+    height: 50px;
+  }
+
+  .post {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  /* Ensure stories section scrolls horizontally and takes up mobile screen space */
+  .story-section {
+    width: 100vw;  /* Ensure stories section fills the width of the screen */
+    padding: 10px 0;  /* Adjust padding to make it look better on small screens */
+  }
+
+  /* Ensure the individual stories fit properly */
+  .individual-story {
+    width: 60px;  /* Smaller width for stories on mobile */
+  }
+
+  .story-username {
+    font-size: 10px; /* Smaller text for usernames */
+  }
+
+  /* Navbar - Instagram Logo and Sidebar Dropdown */
+  .top-navbar {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
+
+  .top-navbar .logo {
+    font-family: 'Instagram', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+  }
+
+  .top-navbar .logo span {
+    color: #0095f6; /* Instagram's brand blue */
+  }
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  .hamburger-menu .bar {
+    width: 30px;
+    height: 4px;
+    background-color: #fff; /* White bars */
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger-menu.open .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(6px); /* Create cross (X) effect */
+  }
+
+  .hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0; /* Hide the middle bar when open */
+  }
+
+  .hamburger-menu.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-6px); /* Create cross (X) effect */
+  }
+
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hide sidebar */
+    height: 100%;
+    width: 250px;
+    background-color: #111;
+    transition: left 0.3s ease;
+    color: #f0f0f0;
+    padding-top: 0px; /* To avoid navbar overlap */
+  }
+
+  .sidebar.open {
+    left: 0; /* Reveal sidebar when open */
+  }
+
+  .sidebar a {
+    color: #f0f0f0;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .sidebar a:hover {
+    background-color: #575757;
+  }
+
+  /* Suggestions Section for Mobile */
+  .suggestions-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: scroll;  /* Enable horizontal scrolling */
+    padding: 10px;
+  }
+
+  .suggestion-item {
+    min-width: 120px;  /* Set the minimum width for each suggestion */
+    margin-right: 10px;  /* Add space between items */
+    text-align: center;
+    color: white;
+  }
+
+  .suggestion-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .suggestion-item p {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}
+.message-section {
+  margin-top: 20px;
+  padding: 15px;
+  border-top: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.message-section h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.message-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.message-send-btn {
+  padding: 10px 15px;
+  font-size: 1em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.message-send-btn:hover {
+  background-color: #0056b3;
+}
+
+.message-list {
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.message-item {
+  padding: 8px;
+  margin-bottom: 5px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  color: #333;
+}
+

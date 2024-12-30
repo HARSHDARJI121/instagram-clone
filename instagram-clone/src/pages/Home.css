@@ -1,0 +1,70 @@
+/* Home.css */
+.home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: black;
+  }
+  h1{
+    color: white;
+  }
+  
+  .home-content {
+    display: flex;
+    background-color: #000000;
+    flex: 1;
+    justify-content: space-between;
+  }
+  
+  .right-sidebar {
+    width: 400px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .suggestions-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .suggestion-item {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .suggestion-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .suggestion-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .suggestion-name {
+    font-weight: bold;
+  }
+  
+  .suggestion-button {
+    background-color: #0095f6;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .suggestion-button:hover {
+    background-color: #007bb5;
+  }
+  
